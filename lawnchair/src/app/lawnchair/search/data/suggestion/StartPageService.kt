@@ -8,6 +8,6 @@ import retrofit2.http.Query
 interface StartPageService {
     @GET("suggestions")
     suspend fun getStartPageSuggestions(
-        @Query("q") query: String,
+        @Query("query") q: String,
     ): Response<ResponseBody>
 }
