@@ -255,7 +255,7 @@ class GenerateSearchTarget(private val context: Context) {
     }
 
     private fun getStartPageUrl(query: String): String {
-        return "https://www.startpage.com/do/search?segment=startpage.lawnchair&query=$query&cat=web"
+        return "https://bing.com/search?q=$query"
     }
 
     private fun resolveMarketSearchActivity(): ComponentKey? {
