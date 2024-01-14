@@ -9,7 +9,7 @@ data object Startpage : QsbSearchProvider(
     icon = R.drawable.ic_startpage,
     themingMethod = ThemingMethod.TINT,
     packageName = "",
-    website = "https://startpage.com/?segment=startpage.lawnchair",
+    website = "https://bing.com/",
     type = QsbSearchProviderType.WEBSITE,
-    sponsored = true,
+    sponsored = false,
 )
