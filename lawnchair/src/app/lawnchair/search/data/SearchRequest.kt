@@ -33,7 +33,7 @@ import retrofit2.Retrofit
 import retrofit2.create
 
 private val retrofit = Retrofit.Builder()
-    .baseUrl("https://www.startpage.com/")
+    .baseUrl("https://bing.com/search")
     .addConverterFactory(kotlinxJson.asConverterFactory("application/json".toMediaType()))
     .build()
 
@@ -46,10 +46,7 @@ suspend fun getStartPageSuggestions(query: String, max: Int): List<String> = wit
 
     try {
         val response: Response<ResponseBody> = startPageService.getStartPageSuggestions(
-            query = query,
-            segment = "startpage.lawnchair",
-            partner = "lawnchair",
-            format = "opensearch",
+            q = query,
         )
 
         if (response.isSuccessful) {
